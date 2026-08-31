@@ -3,7 +3,7 @@ import {Homepage} from "./pages/Homepage.tsx";
 
 const App = () => {
 	return (
-		<div className={"relative w-full bg-[#E4E4E4]"}>
+		<div className={"relative w-full bg-[#E4E4E4] font-inter-tight text-warm-black"}>
 			<Routes>
 				<Route path="/" element={<Homepage/>} />
 			</Routes>

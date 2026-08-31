@@ -11,7 +11,7 @@ const Hero = () => {
 				     className=" w-full h-full object-cover"/>
 				<div className="absolute inset-0 bg-black/40 backdrop-blur-xs"/>
 				
-				<div className="absolute inset-0 flex flex-col justify-between px-6 md:px-10 py-10">
+				<div className="absolute inset-0 flex flex-col justify-between px-4 md:px-10 py-10">
 					
 					<div className="flex flex-col gap-5 lg:flex-row items-center justify-center lg:justify-between">
 						<h1 className={"font-jetbrains-mono tracking-tighter text-[clamp(1px,15vw,120px)] leading-none font-bold text-white"}>Bio-iconic </h1>
@@ -34,10 +34,10 @@ const Hero = () => {
 						</div>
 					</div>
 					
-					<div className={"font-jetbrains-mono flex flex-col gap-5"}>
-						<p className={"w-full md:w-[50%] text-white text-[12px] md:text-[14px]"}>From small businesses placing their first flyer order to established brands outfitting their whole team, Bio-Iconic is the print and branding partner Lagos businesses keep coming back to.</p>
+					<div className={"flex flex-col gap-5"}>
+						<p className={"w-full md:w-[50%] text-white text-[13px] md:text-[16px]"}>From small businesses placing their first flyer order to established brands outfitting their whole team, Bio-Iconic is the print and branding partner Lagos businesses and beyond keep coming back to.</p>
 						<a
-						className={" w-max flex items-center gap-1 rounded-full bg-white font-bold uppercase text-[12px] px-5 py-3"}>
+						className={"font-jetbrains-mono w-max flex items-center gap-1 rounded-full bg-white font-bold uppercase text-[12px] px-5 py-3"}>
 						Request a Quote
 						<ArrowRight size={16}/>
 					</a></div>
