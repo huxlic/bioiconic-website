@@ -1,9 +1,9 @@
 import navLinks from "../../data/navLinks.ts";
 
-export const Navbar = () => {
+const Navbar = () => {
 	return (
 		<>
-			<header className={"w-full py-3 px-8 z-50 font-jetbrains-mono rounded-b-2xl "}>
+			<header className={"w-full py-3 px-2 md:px-8 z-50 font-jetbrains-mono"}>
 				<nav className={"flex items-center justify-between "}>
 					<a className={"text-[22px] bg-warm-black text-faded-black font-black tracking-tighter"} href="/">bio-iconic<span className={"text-reddish-browm text-[25px]"}>.</span> </a>
 					
@@ -36,3 +36,5 @@ export const Navbar = () => {
 		</>
 	);
 };
+
+export default Navbar;
