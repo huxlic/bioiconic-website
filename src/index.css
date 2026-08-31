@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 
 /* inter-tight-100 - latin */
@@ -147,10 +148,13 @@
 
 @theme {
     --font-inter-tight: "Inter Tight";
+    --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
 @theme {
     --color-ink-black: #1A1A1A;
     --color-reddish-browm: #622B14;
     --color-dark-walnut: #2A1309;
+    --color-warm-black: #010101;
+    --color-faded-black: #BEBEBE;
 }

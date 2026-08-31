@@ -13,8 +13,8 @@ const navLinks: NavLinks[] = [
 		ref: "/services",
 	},
 	{
-		label: "Projects",
-		ref: "/projects",
+		label: "Works",
+		ref: "/works",
 	}
 ]
 
