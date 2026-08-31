@@ -1,6 +1,25 @@
 import services from "../../data/services.ts";
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 const Services = () => {
+	
+	useGSAP(() => {
+	const serviceList = gsap.utils.toArray(".service");
+	gsap.from(serviceList, {
+		yPercent: 50,
+		opacity: 0,
+		stagger: 0.05,
+		scrollTrigger: {
+			trigger: "#services-list",
+		}
+		
+	})
+		
+	}, [])
+	
 	return (
 		<section id="service" className={"bg-warm-black rounded-b-2xl px-4 md:px-12 py-20 flex flex-col gap-14"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
@@ -11,18 +30,18 @@ const Services = () => {
 			</div>
 			
 			<div className={"w-full"}>
-				<div className="w-full lg:w-[60%] border-t border-faded-black">
+				<div id="services-list" className="relative w-full lg:w-[60%]">
 					{services.map(({id, name, image}) => (
-						<div key={id} className={"flex items-center justify-between gap-6 py-6 text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-300"}>
+						<div key={id} className={"service flex items-center justify-between gap-6 py-6 text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500"}>
 							<span>0{id}.</span>
 							<p>{name}</p>
 						</div>
 					))}
+				{/*<div style={{backgroundImage: `url(${image})`}} className="w-[40%]">*/}
+				
+				{/*</div>*/}
 				</div>
 				
-				<div className="w-[40%]">
-				
-				</div>
 			</div>
 		</section>
 	)

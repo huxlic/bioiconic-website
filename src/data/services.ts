@@ -1,3 +1,5 @@
+import corporate_merchandise from "../assets/images/corporate-merchandise.jpg"
+
 interface Service {
 	id: number;
 	name: string;
@@ -8,27 +10,27 @@ const services: Service[] = [
 	{
 		id: 1,
 		name: "Flyers & Posters",
-		image: "",
+		image: corporate_merchandise,
 	},
 	{
 		id: 2,
 		name: "Banners & Signage",
-		image: "",
+		image: corporate_merchandise,
 	},
 	{
 		id: 3,
 		name: "Branded Apparel",
-		image: "",
+		image: corporate_merchandise,
 	},
 	{
 		id: 4,
 		name: "Custom Printing",
-		image: "",
+		image: corporate_merchandise,
 	},
 	{
 		id: 5,
 		name: "Corporate Merchandise",
-		image: "",
+		image: corporate_merchandise,
 	}
 ];
 
