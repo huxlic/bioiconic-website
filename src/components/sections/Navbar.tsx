@@ -26,9 +26,9 @@ export const Navbar = () => {
 						</a>
 					</div>
 					
-					<div className="relative group flex flex-col items-center justify-center gap-1 md:hidden bg-white rounded-full w-10 h-10">
-						<div className={"absolute w-6 h-px bg-warm-black rounded-full group-hover:-rotate-45 -translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
-						<div className={"absolute w-6 h-px bg-warm-black rounded-full group-hover:rotate-45 translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
+					<div className="relative group flex flex-col items-center justify-center gap-1 md:hidden h-8 w-8">
+						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:-rotate-45 -translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
+						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:rotate-45 translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
 					</div>
 				
 				</nav>
