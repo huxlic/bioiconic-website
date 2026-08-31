@@ -17,7 +17,7 @@ const Navbar = () => {
 					</div>
 					
 					<div className="hidden md:flex items-center gap-4 tracking-tighter text-[12px]">
-						<a href="" className={"bg-faded-black hover:bg-faded-black/80 px-5 py-3 rounded-full uppercase font-semibold"}>
+						<a href="" className={"bg-[#BEBEBE] hover:bg-faded-black/80 px-5 py-3 rounded-full uppercase font-semibold"}>
 							request a quote
 						</a>
 						
