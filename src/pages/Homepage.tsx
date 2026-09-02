@@ -4,6 +4,7 @@ import About from "../components/sections/About.tsx";
 import Services from "../components/sections/Services.tsx";
 import KeyStats from "../components/sections/KeyStats.tsx";
 import Faqs from "../components/sections/Faqs.tsx";
+import Footer from "../components/sections/Footer.tsx";
 
 export const Homepage = () => {
 	return (
@@ -15,6 +16,7 @@ export const Homepage = () => {
 				<Services/>
 				<KeyStats/>
 				<Faqs/>
+				<Footer/>
 			</div>
 		</>
 	);
