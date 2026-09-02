@@ -152,10 +152,9 @@
 }
 
 @theme {
-    --color-ink-black: #1A1A1A;
-    --color-reddish-browm: #622B14;
-    --color-dark-walnut: #2A1309;
-    --color-warm-black: #0A0A0A;
+    --color-olive-green: #1F6E3D;
+    --color-vib-orange: #F2872E;
+    --color-warm-black: #1A1E1A;
     --color-faded-black: #767676;
     --color-warm-cream: #F8F7F5;
 }

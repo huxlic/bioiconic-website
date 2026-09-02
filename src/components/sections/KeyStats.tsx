@@ -50,7 +50,10 @@ const KeyStats = () => {
 	return (
 		<section id={"key-stat"} className={"px-4 md:px-12 py-20 flex flex-col gap-10"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
-				<h2 className={"lg:flex-1 font-jetbrains-mono uppercase font-extrabold"}>key stats</h2>
+				<div className="lg:flex-1 flex gap-1">
+					<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>
+					<h2 className={"font-jetbrains-mono uppercase font-extrabold"}>key stats</h2>
+				</div>
 				<p id="keystat-desc"
 				   className={"lg:flex-4 text-faded-black text-[26px] sm:text-[30px] lg:text-[36px] font-medium leading-10 lg:leading-12"}>
 					"From flyers to banners to branded apparel, every piece we deliver is built to make your brand seen,

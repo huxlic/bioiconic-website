@@ -27,9 +27,12 @@ const Services = () => {
 	}, [])
 	
 	return (
-		<section id="service" className={"bg-warm-black rounded-b-2xl px-4 md:px-12 py-20 flex flex-col gap-14"}>
+		<section id="services" className={"bg-warm-black rounded-b-2xl px-4 md:px-12 py-20 flex flex-col gap-14"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
-				<h2 className={"lg:flex-1 font-jetbrains-mono uppercase font-extrabold text-white"}>Service</h2>
+				<div className="lg:flex-1 flex gap-1">
+					<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>
+					<h2 className={"font-jetbrains-mono uppercase font-extrabold text-white"}>Service</h2>
+				</div>
 				<p className={"lg:flex-4 text-white leading-none text-[26px] sm:text-[50px] lg:text-[60px] font-medium"}>
 					Ideas to impressions
 				</p>
@@ -38,7 +41,7 @@ const Services = () => {
 			<div className={"w-full flex"}>
 				<div id="services-list" className="relative w-full lg:w-[60%]">
 					{services.map(({id, name, image}) => (
-						<div onMouseOver={() => setServiceImage(image)} key={id} className={"service flex items-center justify-between gap-6 py-6 text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500 cursor-pointer"}>
+						<div onMouseOver={() => setServiceImage(image)} key={id} className={"service flex items-center justify-between gap-6 py-6 text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-[#F2872E] font-semibold border-b transition-colors duration-500 cursor-pointer"}>
 							<span>0{id}.</span>
 							<p>{name}</p>
 						</div>

@@ -7,7 +7,10 @@ const Faqs = () => {
 		<>
 			<section id="about" className={"px-4 md:px-12 py-20 flex flex-col gap-6"}>
 				<div className={"flex flex-col lg:flex-row gap-6"}>
-					<h2 className={"lg:flex-1 font-jetbrains-mono uppercase font-extrabold"}>FAQs</h2>
+					<div className="lg:flex-1 flex gap-1">
+						<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>
+						<h2 className={"font-jetbrains-mono uppercase font-extrabold"}>FAQs</h2>
+					</div>
 					<div className={"lg:flex-4 flex flex-col gap-10"}>
 						<p
 							className={"leading-none text-[26px] sm:text-[50px] lg:text-[60px] font-medium"}>

@@ -7,18 +7,18 @@ interface Stat {
 const stats: Stat[] = [
 	{
 		id: 1,
-		number: "0+",
-		description: "Brands Elevated Over the Years With Purpose",
+		number: "15+",
+		description: "Years of Experience Serving Businesses",
 	},
 	{
 		id: 2,
-		number: "0+",
-		description: "Projects Delivered Across Print and Apparel",
+		number: "20+",
+		description: "Stable Clients Across Private, Government, and Individual Sectors",
 	},
 	{
 		id: 3,
-		number: "0+",
-		description: "Businesses Trusted Us With Their Branding",
+		number: "500+",
+		description: "Projects Delivered Across Print and Apparel",
 	},
 	{
 		id: 4,

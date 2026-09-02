@@ -6,15 +6,15 @@ interface NavLinks {
 const navLinks: NavLinks[] = [
 	{
 		label: "About Us",
-		ref: "/about",
+		ref: "#about",
 	},
 	{
 		label: "Services",
-		ref: "/services",
+		ref: "#services",
 	},
 	{
 		label: "Works",
-		ref: "/works",
+		ref: "#works",
 	}
 ]
 

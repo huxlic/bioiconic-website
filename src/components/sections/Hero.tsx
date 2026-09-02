@@ -37,7 +37,7 @@ const Hero = () => {
 					<div className={"flex flex-col gap-5"}>
 						<p className={"w-full md:w-[50%] text-white text-[13px] md:text-[16px]"}>From small businesses placing their first flyer order to established brands outfitting their whole team, Bio-Iconic is the print and branding partner Lagos businesses and beyond keep coming back to.</p>
 						<a
-						className={"font-jetbrains-mono w-max flex items-center gap-1 rounded-full bg-white font-bold uppercase text-[12px] px-5 py-3"}>
+						className={"font-jetbrains-mono w-max flex items-center gap-1 rounded-full bg-[#F2872E] font-bold uppercase text-white text-[12px] px-5 py-3"}>
 						Request a Quote
 						<ArrowRight size={16}/>
 					</a></div>
