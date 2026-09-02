@@ -1,3 +1,7 @@
+import flyers from "../assets/images/flyers.jpg";
+import signage from "../assets/images/signage.jpg";
+import branded_apparel from "../assets/images/branded-apparel.jpg";
+import custom_printing from "../assets/images/modern-printing.jpg";
 import corporate_merchandise from "../assets/images/corporate-merchandise.jpg"
 
 interface Service {
@@ -10,22 +14,22 @@ const services: Service[] = [
 	{
 		id: 1,
 		name: "Flyers & Posters",
-		image: corporate_merchandise,
+		image: flyers,
 	},
 	{
 		id: 2,
 		name: "Banners & Signage",
-		image: corporate_merchandise,
+		image: signage,
 	},
 	{
 		id: 3,
 		name: "Branded Apparel",
-		image: corporate_merchandise,
+		image: branded_apparel,
 	},
 	{
 		id: 4,
 		name: "Custom Printing",
-		image: corporate_merchandise,
+		image: custom_printing,
 	},
 	{
 		id: 5,

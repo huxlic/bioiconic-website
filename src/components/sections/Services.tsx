@@ -2,9 +2,16 @@ import services from "../../data/services.ts";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useState} from "react";
+
+import flyers from "../../assets/images/flyers.jpg";
+
 gsap.registerPlugin(ScrollTrigger)
 
+
+
 const Services = () => {
+	const [serviceImage, setServiceImage] = useState<string | null>(flyers);
 	
 	useGSAP(() => {
 	const serviceList = gsap.utils.toArray(".service");
@@ -29,17 +36,17 @@ const Services = () => {
 				</p>
 			</div>
 			
-			<div className={"w-full"}>
+			<div className={"w-full flex"}>
 				<div id="services-list" className="relative w-full lg:w-[60%]">
 					{services.map(({id, name, image}) => (
-						<div key={id} className={"service flex items-center justify-between gap-6 py-6 text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500"}>
+						<div onMouseOver={() => setServiceImage(image)} key={id} className={"service flex items-center justify-between gap-6 py-6 text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500 cursor-pointer"}>
 							<span>0{id}.</span>
 							<p>{name}</p>
 						</div>
 					))}
-				{/*<div style={{backgroundImage: `url(${image})`}} className="w-[40%]">*/}
-				
-				{/*</div>*/}
+				</div>
+				<div className={"hidden lg:block lg:w-[40%] px-8 overflow-hidden h-max"}>
+					<div style={{backgroundImage: `url(${serviceImage})`}} className="h-50 rounded-2xl bg-cover transition-all"/>
 				</div>
 				
 			</div>
