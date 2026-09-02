@@ -61,8 +61,8 @@ const KeyStats = () => {
 				<div id="stats-holder" className="lg:flex-1 grid grid-cols-2 gap-10">
 					{stats.map(({id, number, description}) => (
 						<div key={id} className={"stat"}>
-							<p className={"text-[60px] leading-none font-bold font-jetbrains-mono"}>{number}</p>
-							<span className={"text-faded-black"}>{description}</span>
+							<p className={"text-[50px] md:text-[60px] leading-none font-bold font-jetbrains-mono"}>{number}</p>
+							<span className={"text-[14px] md:text-[16px] text-faded-black"}>{description}</span>
 						</div>
 					))}
 				</div>

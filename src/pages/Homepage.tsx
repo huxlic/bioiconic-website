@@ -3,6 +3,7 @@ import Navbar from "../components/sections/Navbar.tsx";
 import About from "../components/sections/About.tsx";
 import Services from "../components/sections/Services.tsx";
 import KeyStats from "../components/sections/KeyStats.tsx";
+import Faqs from "../components/sections/Faqs.tsx";
 
 export const Homepage = () => {
 	return (
@@ -13,6 +14,7 @@ export const Homepage = () => {
 				<About/>
 				<Services/>
 				<KeyStats/>
+				<Faqs/>
 			</div>
 		</>
 	);
