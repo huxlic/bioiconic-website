@@ -1,3 +1,4 @@
+import works from "../../data/works.ts";
 
 const Works = () => {
 	return (
@@ -11,6 +12,17 @@ const Works = () => {
 					className={"lg:flex-4 leading-none text-[26px] sm:text-[50px] lg:text-[60px] font-medium"}>
 					Work We're Proud Of
 				</p>
+			</div>
+			
+			<div className="columns-3">
+				{works.slice(0, 8).map(({id, title, image}) => (
+					<div
+						className="overflow-hidden rounded-3xl mb-4 break-inside-avoid"
+						key={id}
+					>
+						<img src={image} alt={title} className="w-full h-auto" />
+					</div>
+				))}
 			</div>
 		</section>
 	)

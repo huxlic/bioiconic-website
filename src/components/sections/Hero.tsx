@@ -6,7 +6,7 @@ const image = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEh
 const Hero = () => {
 	return (
 		<div className={"px-2"}>
-			<section className={"relative w-full bg-fixed h-[90vh] bg-cover bg-center overflow-hidden rounded-lg"}>
+			<section className={"relative w-full bg-fixed h-[90vh] bg-cover bg-center overflow-hidden rounded-2xl"}>
 				<img src={background_image} alt="Bio-Iconic printed products"
 				     className=" w-full h-full object-cover"/>
 				<div className="absolute inset-0 bg-black/40 backdrop-blur-xs"/>

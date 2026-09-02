@@ -27,7 +27,7 @@ const Services = () => {
 	}, [])
 	
 	return (
-		<section id="services" className={"bg-warm-black rounded-b-2xl px-4 md:px-12 py-20 flex flex-col gap-14"}>
+		<section id="services" className={"bg-warm-black rounded-b-3xl px-4 md:px-12 py-20 flex flex-col gap-14"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
 				<div className="lg:flex-1 flex gap-1">
 					<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>

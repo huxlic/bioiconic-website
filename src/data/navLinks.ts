@@ -15,7 +15,11 @@ const navLinks: NavLinks[] = [
 	{
 		label: "Works",
 		ref: "#works",
-	}
+	},
+	{
+		label: "FAQs",
+		ref: "#faqs",
+	},
 ]
 
 export default navLinks;
