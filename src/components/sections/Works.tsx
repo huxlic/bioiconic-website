@@ -1,4 +1,5 @@
 import works from "../../data/works.ts";
+import {Link} from "react-router";
 
 const Works = () => {
 	return (
@@ -12,15 +13,21 @@ const Works = () => {
 					className={"lg:flex-4 leading-none text-[26px] sm:text-[50px] lg:text-[60px] font-medium"}>
 					Work We're Proud Of
 				</p>
+				
+				<Link to="/works" className={"w-max h-max bg-vib-orange hover:bg-vib-orange/80 px-5 py-3 rounded-full font-semibold text-white"}>
+					View all works
+				</Link>
 			</div>
 			
 			<div className="columns-3">
-				{works.slice(0, 8).map(({id, title, image}) => (
-					<div
-						className="overflow-hidden rounded-3xl mb-4 break-inside-avoid"
-						key={id}
-					>
-						<img src={image} alt={title} className="w-full h-auto" />
+				{works.slice(0, 5).map(({id, title, image}) => (
+					<div key={id} className={"flex flex-col gap-1 mb-4 break-inside-avoid"}>
+						<div
+							className="overflow-hidden rounded-2xl md:rounded-3xl"
+						>
+							<img src={image} alt={title} className="w-full h-auto hover:scale-105 transition-transform duration-500"/>
+						</div>
+						<p className={"text-[14px] md:text-[16px] lg:text-[22px] tracking-tighter font-semibold"}>{title}</p>
 					</div>
 				))}
 			</div>
