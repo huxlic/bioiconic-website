@@ -4,14 +4,14 @@ import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useState} from "react";
 
-import flyers from "../../assets/images/flyers.jpg";
+import posters from "../../assets/images/posters.jpg";
 
 gsap.registerPlugin(ScrollTrigger)
 
 
 
 const Services = () => {
-	const [serviceImage, setServiceImage] = useState<string | null>(flyers);
+	const [serviceImage, setServiceImage] = useState<string | null>(posters);
 	
 	useGSAP(() => {
 	const serviceList = gsap.utils.toArray(".service");
@@ -22,7 +22,6 @@ const Services = () => {
 		scrollTrigger: {
 			trigger: "#services-list",
 		}
-		
 	})
 		
 	}, [])
@@ -39,7 +38,7 @@ const Services = () => {
 			<div className={"w-full flex"}>
 				<div id="services-list" className="relative w-full lg:w-[60%]">
 					{services.map(({id, name, image}) => (
-						<div onMouseOver={() => setServiceImage(image)} key={id} className={"service flex items-center justify-between gap-6 py-6 text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500 cursor-pointer"}>
+						<div onMouseOver={() => setServiceImage(image)} key={id} className={"service flex items-center justify-between gap-6 py-6 text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] text-faded-black hover:text-white font-semibold border-b transition-colors duration-500 cursor-pointer"}>
 							<span>0{id}.</span>
 							<p>{name}</p>
 						</div>
