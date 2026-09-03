@@ -28,7 +28,7 @@ const WorksPage = () => {
 	return (
 		<div>
 			<Navbar/>
-			<section id={"works"} className={"px-4 md:px-12 py-20 flex flex-col gap-10"}>
+			<section id={"works"} className={"px-4 md:px-12 pt-10 pb-20 flex flex-col gap-10"}>
 				<div className={"flex flex-col lg:flex-row gap-6"}>
 					<div className="lg:flex-1 flex gap-1">
 						<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>

@@ -63,7 +63,7 @@ const Navbar = () => {
 								</li>
 							))}
 						</ul>
-						<a href="#footer"
+						<a onClick={() => setIsNavOpen(false)} href="#footer"
 						   className={"bg-olive-green hover:bg-olive-green/80 px-5 py-3 rounded-full uppercase font-semibold text-white flex items-center justify-center"}>
 							contact me
 						</a>
