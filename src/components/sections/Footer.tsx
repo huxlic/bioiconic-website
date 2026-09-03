@@ -13,13 +13,13 @@ const Footer = () => {
 				</h3>
 			</div>
 			
-			<div className="flex flex-col lg:grid lg:grid-cols-5 gap-10 p-6">
-				<div className="text-white col-span-2">
+			<div className="flex flex-col lg:grid lg:grid-cols-6 gap-10 lg:gap-20 p-6">
+				<div className="text-white col-span-3">
 					<p className={"text-[14px] md:text-[16px] text-[#f9f9f999]"}>From flyers to banners to branded apparel, every piece we deliver is built to make your brand seen, remembered, and trusted.</p>
 					<a className={"text-[30px] md:text-[50px] font-semibold border-b"} href="mailto:hello@bioiconic.com">hello@bioiconic.com</a>
 				</div>
 				
-				<div className={"lg:col-span-3 flex justify-between"}>
+				<div className={"lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-4 "}>
 					<div className="text-white flex flex-col gap-2">
 						<p className={"capitalize text-[16px] md:text-[18px] font-semibold"}>navigation</p>
 						<ul className={"flex flex-col gap-2"}>
