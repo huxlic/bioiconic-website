@@ -56,8 +56,8 @@ const Navbar = () => {
 					<div className="font-inter-tight md:hidden h-full flex flex-col gap-5 mb-4">
 						<ul>
 							{navLinks.map(({label, ref}) => (
-								<li onClick={() => setIsNavOpen(false)} key={label} className="py-2">
-									<a className="text-warm-black hover:text-olive-green font-semibold text-[20px]" href={ref}>
+								<li key={label} className="py-2">
+									<a onClick={() => setIsNavOpen(false)} className="text-warm-black hover:text-olive-green font-semibold text-[20px]" href={ref}>
 										{label}
 									</a>
 								</li>
