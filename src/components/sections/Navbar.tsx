@@ -1,11 +1,16 @@
 import navLinks from "../../data/navLinks.ts";
+import {useState} from "react";
 
 const Navbar = () => {
+	const [isNavOpen, setIsNavOpen] = useState(false);
+	
 	return (
 		<>
-			<header className={"w-full py-3 px-2 md:px-8 z-50 font-jetbrains-mono"}>
+			<header
+				className={`w-full bg-[#E4E4E4] ${isNavOpen ? "h-max" : "h-auto"} flex flex-col gap-10 fixed md:relative py-3 px-2 md:px-8 z-50 font-jetbrains-mono`}>
 				<nav className={"flex items-center justify-between "}>
-					<a className={"text-[22px] bg-vib-orange/50 text-olive-green font-black tracking-tighter"} href="/">bio-iconic<span className={"text-vib-orange text-[25px]"}>.</span> </a>
+					<a className={"text-[22px] bg-vib-orange/50 text-olive-green font-black tracking-tighter"} href="/">bio-iconic<span
+						className={"text-vib-orange text-[25px]"}>.</span> </a>
 					
 					<div className={"hidden md:flex items-center text-warm-black md:gap-8"}>
 						{navLinks.map(({label, ref}) => (
@@ -18,18 +23,55 @@ const Navbar = () => {
 					
 					<div className="hidden md:flex items-center gap-4 tracking-tighter text-[12px]">
 						
-						<a href="#footer" className={"bg-olive-green hover:bg-olive-green/80 px-5 py-3 rounded-full uppercase font-semibold text-white"}>
+						<a href="#footer"
+						   className={"bg-olive-green hover:bg-olive-green/80 px-5 py-3 rounded-full uppercase font-semibold text-white"}>
 							contact me
 						</a>
 					</div>
 					
-					<div className="relative group flex flex-col items-center justify-center gap-1 md:hidden h-8 w-8">
-						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:-rotate-45 -translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
-						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:rotate-45 translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
-					</div>
+					<button onClick={() => setIsNavOpen(!isNavOpen)}
+					        className="relative group flex flex-col items-center justify-center gap-1 md:hidden h-8 w-8 cursor-pointer">
+						{
+							isNavOpen ? (
+								<>
+									<span
+										className={"absolute w-7 h-0.75 bg-vib-orange rounded-full rotate-45"}></span>
+									<span
+										className={"absolute w-7 h-0.75 bg-vib-orange rounded-full -rotate-45"}></span>
+								</>
+								) : (
+								<>
+									<span
+										className={"absolute w-7 h-0.75 bg-vib-orange rounded-full -translate-y-0.5 "}></span>
+									<span
+										className={"absolute w-7 h-0.75 bg-vib-orange rounded-full  translate-y-0.5"}></span>
+								</>
+							)
+						}
+					</button>
 				
 				</nav>
+				
+				{isNavOpen && (
+					<div className="font-inter-tight md:hidden h-full flex flex-col gap-5 mb-4">
+						<ul>
+							{navLinks.map(({label, ref}) => (
+								<li key={label} className="py-2">
+									<a onClick={() => setIsNavOpen(false)} className="text-warm-black hover:text-olive-green font-semibold text-[20px]" href={ref}>
+										{label}
+									</a>
+								</li>
+							))}
+						</ul>
+						<a onClick={() => setIsNavOpen(false)} href="#footer"
+						   className={"bg-olive-green hover:bg-olive-green/80 px-5 py-3 rounded-full uppercase font-semibold text-white flex items-center justify-center"}>
+							contact me
+						</a>
+					</div>
+				)}
 			</header>
+			
+			<div className="md:hidden h-20"></div>
 		</>
 	);
 };
