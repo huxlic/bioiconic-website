@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router";
 import {Homepage} from "./pages/Homepage.tsx";
 import WorksPage from "./pages/WorksPage.tsx";
+import RequestQuote from "./pages/RequestQuote.tsx";
 
 const App = () => {
 	return (
@@ -8,6 +9,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Homepage/>} />
 				<Route path="/works" element={<WorksPage/>} />
+				<Route path="/request-a-quote" element={<RequestQuote/>} />
 			</Routes>
 		</div>
 	)

@@ -13,7 +13,7 @@ const Footer = () => {
 				</h3>
 			</div>
 			
-			<div className="flex flex-col lg:grid lg:grid-cols-6 gap-10 lg:gap-20 p-6">
+			<div className="flex flex-col lg:grid lg:grid-cols-6 gap-10 lg:gap-20 px-6 py-15">
 				<div className="text-white col-span-3">
 					<p className={"text-[14px] md:text-[16px] text-[#f9f9f999]"}>From flyers to banners to branded apparel, every piece we deliver is built to make your brand seen, remembered, and trusted.</p>
 					<a className={"text-[30px] md:text-[50px] font-semibold border-b"} href="mailto:hello@bioiconic.com">hello@bioiconic.com</a>
@@ -49,7 +49,7 @@ const Footer = () => {
 					</div>
 					
 					<div className="text-white flex flex-col gap-2">
-						<p className={"capitalize text-[16px] md:text-[18px] font-semibold"}>contact us</p>
+						<p className={"capitalize text-[16px] md:text-[18px] font-semibold"}>contact me</p>
 						<ul className={"flex flex-col gap-2"}>
 							<li className={"text-[12px] md:text-[16px] text-[#f9f9f999] hover:text-white font-medium transition-colors duration-300"}>
 								<a href="tel:+2348031101873">08031101873</a>
