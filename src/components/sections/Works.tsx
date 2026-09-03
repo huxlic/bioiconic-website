@@ -1,7 +1,27 @@
 import works from "../../data/works.ts";
 import {Link} from "react-router";
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+	useGSAP(() => {
+		const projects = gsap.utils.toArray(".project");
+		
+		gsap.from(projects, {
+			yPercent: 20,
+			opacity: 0,
+			stagger: 0.2,
+			scrollTrigger: {
+				trigger: ".works",
+				start: "top center",
+			},
+			ease: "power1.inOut"
+		})
+	}, [])
+	
 	return (
 		<section id={"works"} className={"px-4 md:px-12 py-20 flex flex-col gap-10"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
@@ -19,9 +39,9 @@ const Works = () => {
 				</Link>
 			</div>
 			
-			<div className="columns-3">
+			<div className="works columns-3">
 				{works.slice(0, 5).map(({id, title, image}) => (
-					<div key={id} className={"flex flex-col gap-1 mb-4 break-inside-avoid"}>
+					<div key={id} className={"project flex flex-col gap-1 mb-4 break-inside-avoid"}>
 						<div
 							className="overflow-hidden rounded-2xl md:rounded-3xl"
 						>

@@ -1,6 +1,9 @@
 import navLinks from "../../data/navLinks.ts";
+import {useState} from "react";
 
 const Navbar = () => {
+	const [isNavOpen, setIsNavOpen] = useState(false);
+	
 	return (
 		<>
 			<header className={"w-full py-3 px-2 md:px-8 z-50 font-jetbrains-mono"}>
@@ -23,13 +26,17 @@ const Navbar = () => {
 						</a>
 					</div>
 					
-					<div className="relative group flex flex-col items-center justify-center gap-1 md:hidden h-8 w-8">
-						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:-rotate-45 -translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
-						<div className={"absolute w-6 h-0.5 bg-warm-black rounded-full group-hover:rotate-45 translate-y-0.5 group-hover:translate-y-0 transition-transform"}></div>
-					</div>
+					<button onClick={() => setIsNavOpen(!isNavOpen)} className="relative group flex flex-col items-center justify-center gap-1 md:hidden h-8 w-8">
+						<span className={"absolute w-8 h-0.5 bg-warm-black rounded-full -translate-y-0.5 "}></span>
+						<span className={"absolute w-6 h-0.5 bg-warm-black rounded-full  translate-y-0.5"}></span>
+					</button>
 				
 				</nav>
 			</header>
+			
+			{isNavOpen && <div className="bg-warm-black/60 fixed inset-0 z-10">
+			
+			</div>}
 		</>
 	);
 };
