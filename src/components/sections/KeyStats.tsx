@@ -19,7 +19,7 @@ const KeyStats = () => {
 		gsap.to(keystatDesc.chars, {
 			color: "#0A0A0A",
 			scrollTrigger: {
-				trigger: "#key-stat",
+				trigger: "#key-stats",
 				start: "top bottom",
 				end: "top top",
 				scrub: 0.5
@@ -48,7 +48,7 @@ const KeyStats = () => {
 	}, [])
 	
 	return (
-		<section id={"key-stat"} className={"px-4 md:px-12 py-20 flex flex-col gap-10"}>
+		<section id={"key-stats"} className={"px-4 md:px-12 py-20 flex flex-col gap-10"}>
 			<div className={"flex flex-col lg:flex-row gap-6"}>
 				<div className="lg:flex-1 flex gap-1">
 					<span className={"bg-vib-orange p-2 rounded-full h-max"}></span>
