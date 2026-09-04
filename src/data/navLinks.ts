@@ -17,6 +17,10 @@ const navLinks: NavLinks[] = [
 		ref: "#works",
 	},
 	{
+		label: "Key Stats",
+		ref: "#key-stats",
+	},
+	{
 		label: "FAQs",
 		ref: "#faqs",
 	},
