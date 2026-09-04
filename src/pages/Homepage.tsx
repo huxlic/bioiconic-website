@@ -11,7 +11,7 @@ export const Homepage = () => {
 	return (
 		<>
 			<div className="">
-				<Navbar/>
+				<Navbar show={true} />
 				<Hero/>
 				<About/>
 				<Services/>

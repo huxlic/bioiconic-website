@@ -12,10 +12,13 @@ const Hero = () => {
 				     className=" w-full h-full object-cover"/>
 				<div className="absolute inset-0 bg-black/40 backdrop-blur-xs"/>
 				
-				<div className="absolute inset-0 flex flex-col justify-between px-4 md:px-10 py-10">
+				<div className="absolute inset-0 flex flex-col justify-between gap-10 px-4 md:px-10 py-10">
 					
 					<div className="flex flex-col gap-5 lg:flex-row items-center justify-center lg:justify-between">
-						<h1 className={"font-jetbrains-mono tracking-tighter text-[clamp(1px,15vw,120px)] leading-none font-bold text-white"}>Bio-iconic </h1>
+						<div className="leading-none flex flex-col items-center lg:items-start">
+							<h1 className={"tracking-tighter text-[clamp(30px,20vw,150px)] font-bold text-white"}>Bio-iconic </h1>
+							<p className={"font-jetbrains-mono tracking-tighter font-bold text-white lg:ml-1"}>Premier Solutions Nigeria LTD.</p>
+						</div>
 						
 						<div className="lg:w-[30%] flex flex-col gap-2">
 							<div className="flex items-center gap-1">
