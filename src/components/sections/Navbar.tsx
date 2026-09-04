@@ -1,7 +1,7 @@
 import navLinks from "../../data/navLinks.ts";
 import {useState} from "react";
 
-const Navbar = ({show = true}: {show: boolean}) => {
+const Navbar = ({show}: {show: boolean}) => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	
 	return (
