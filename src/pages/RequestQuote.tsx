@@ -2,7 +2,6 @@ import { useState } from "react";
 import * as React from "react";
 import Input from "../components/ui/Input.tsx";
 import Navbar from "../components/sections/Navbar.tsx";
-
 interface QuoteFormData {
 	name: string;
 	email: string;
@@ -35,7 +34,6 @@ const RequestQuote = () => {
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
 	) => {
 		setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-		console.log(formData)
 		
 	};
 	
@@ -44,7 +42,7 @@ const RequestQuote = () => {
 		setStatus("loading");
 		
 		try {
-			const response = await fetch("/api/quote", {
+			const response = await fetch("../../api/quote.ts", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(formData),
@@ -56,6 +54,8 @@ const RequestQuote = () => {
 			
 			setStatus("success");
 			setFormData(initialFormData);
+			console.log("Request sent successfully");
+			
 		} catch {
 			setStatus("error");
 		}
@@ -153,12 +153,12 @@ const RequestQuote = () => {
 						</button>
 						
 						{status === "success" && (
-							<p className="text-green-700 text-center font-medium">
+							<p className="text-olive-green text-center font-medium text-[14px]">
 								Request sent! We'll get back to you shortly.
 							</p>
 						)}
 						{status === "error" && (
-							<p className="text-red-600 text-center font-medium">
+							<p className="text-red-600 text-center font-medium text-[14px]">
 								Something went wrong. Please try again or reach us on WhatsApp.
 							</p>
 						)}
