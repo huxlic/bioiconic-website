@@ -1,14 +1,14 @@
-import award from "../assets/premium-images/award.jpeg";
-import balancee from "../assets/premium-images/balancee.jpeg";
-import balanceeBack from "../assets/premium-images/balancee-back.jpeg";
-import birthdayFan from "../assets/premium-images/birthday-fan.jpeg";
-import clientWeySabi from "../assets/premium-images/client-wey-sabi.jpeg";
-import cruate from "../assets/premium-images/cruate.jpeg";
-import cruateBottom from "../assets/premium-images/cruate-bottom.jpeg";
-import fasu from "../assets/premium-images/fasu.jpeg";
-import harvest from "../assets/premium-images/harvest.jpeg";
-import sgs from "../assets/premium-images/sgs.jpeg";
-import unilagNigeria from "../assets/premium-images/unilag-nigeria.jpeg";
+import award from "../assets/bioiconic-images/award.jpeg";
+import balancee from "../assets/bioiconic-images/balancee.jpeg";
+import balanceeBack from "../assets/bioiconic-images/balancee-back.jpeg";
+import birthdayFan from "../assets/bioiconic-images/birthday-fan.jpeg";
+import clientWeySabi from "../assets/bioiconic-images/client-wey-sabi.jpeg";
+import cruate from "../assets/bioiconic-images/cruate.jpeg";
+import cruateBottom from "../assets/bioiconic-images/cruate-bottom.jpeg";
+import fasu from "../assets/bioiconic-images/fasu.jpeg";
+import harvest from "../assets/bioiconic-images/harvest.jpeg";
+import sgs from "../assets/bioiconic-images/sgs.jpeg";
+import unilagNigeria from "../assets/bioiconic-images/unilag-nigeria.jpeg";
 
 interface  Work {
 	id: number;
