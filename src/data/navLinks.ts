@@ -24,6 +24,6 @@ const navLinks: NavLinks[] = [
 		label: "FAQs",
 		ref: "#faqs",
 	},
-]
+];
 
 export default navLinks;
