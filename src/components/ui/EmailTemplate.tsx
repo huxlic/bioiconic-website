@@ -1,4 +1,4 @@
-interface EmailTemplateProps {
+export interface EmailTemplateProps {
 	name: string;
 	email: string;
 	phone: string;
@@ -10,17 +10,19 @@ interface EmailTemplateProps {
 	message: string;
 }
 
-const EmailTemplate = ({
-	                       name,
-	                       email,
-	                       phone,
-	                       product,
-	                       quantity,
-	                       deadline,
-	                       location,
-	                       hasDesign,
-	                       message
-                       }: EmailTemplateProps) => {
+// {
+// 	name,
+// 		email,
+// 		phone,
+// 		product,
+// 		quantity,
+// 		deadline,
+// 		location,
+// 		hasDesign,
+// 		message
+// }: EmailTemplateProps
+
+const EmailTemplate = () => {
 	return (
 		<div>
 		
