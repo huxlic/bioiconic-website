@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import * as React from "react";
 import emailjs from "@emailjs/browser";
 import Input from "../components/ui/Input.tsx";
@@ -35,6 +35,10 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const RequestQuote = () => {
 	const [formData, setFormData] = useState<QuoteFormData>(initialFormData);
 	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	
+	useEffect(() => {
+		emailjs.init(EMAILJS_PUBLIC_KEY);
+	}, []);
 	
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
