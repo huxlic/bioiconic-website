@@ -1,7 +1,9 @@
 import { useState } from "react";
 import * as React from "react";
+import emailjs from "@emailjs/browser";
 import Input from "../components/ui/Input.tsx";
 import Navbar from "../components/sections/Navbar.tsx";
+
 interface QuoteFormData {
 	name: string;
 	email: string;
@@ -26,6 +28,10 @@ const initialFormData: QuoteFormData = {
 	message: "",
 };
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const RequestQuote = () => {
 	const [formData, setFormData] = useState<QuoteFormData>(initialFormData);
 	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -34,7 +40,6 @@ const RequestQuote = () => {
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
 	) => {
 		setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-		
 	};
 	
 	const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
@@ -42,21 +47,19 @@ const RequestQuote = () => {
 		setStatus("loading");
 		
 		try {
-			const response = await fetch("../../api/quote.ts", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(formData),
-			});
-			
-			if (!response.ok) {
-				throw new Error("Failed to send")
-			}
+			await emailjs.send(
+				EMAILJS_SERVICE_ID,
+				EMAILJS_TEMPLATE_ID,
+				{ ...formData },
+				EMAILJS_PUBLIC_KEY
+			);
 			
 			setStatus("success");
 			setFormData(initialFormData);
 			console.log("Request sent successfully");
 			
-		} catch {
+		} catch (error) {
+			console.error("EmailJS error:", error);
 			setStatus("error");
 		}
 	};
