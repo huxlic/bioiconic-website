@@ -16,7 +16,7 @@ const Footer = () => {
 			<div className="flex flex-col lg:grid lg:grid-cols-6 gap-10 lg:gap-20 px-6 py-15">
 				<div className="text-white col-span-3">
 					<p className={"text-[14px] md:text-[16px] text-[#f9f9f999]"}>From flyers to banners to branded apparel, every piece we deliver is built to make your brand seen, remembered, and trusted.</p>
-					<a className={"text-[30px] md:text-[50px] font-semibold border-b"} href="mailto:hello@bioiconic.com">hello@bioiconic.com</a>
+					<a className={"text-[30px] md:text-[50px] font-semibold border-b"} href="mailto:biqyone@gmail.com">biqyone@gmail.com</a>
 				</div>
 				
 				<div className={"lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-4 "}>
@@ -58,7 +58,7 @@ const Footer = () => {
 								<a href="tel:+2348024244234">08024244234</a>
 							</li>
 							<li className={"text-[12px] md:text-[16px] text-[#f9f9f999] hover:text-white font-medium transition-colors duration-300"}>
-								<a href="mailto:hello@bioiconic.com">hello@bioiconic.com</a>
+								<a href="mailto:biqyone@gmail.com">biqyone@gmail.com</a>
 							</li>
 						</ul>
 					</div>
