@@ -9,6 +9,9 @@ import fasu from "../assets/bioiconic-images/fasu.jpeg";
 import harvest from "../assets/bioiconic-images/harvest.jpeg";
 import sgs from "../assets/bioiconic-images/sgs.jpeg";
 import unilagNigeria from "../assets/bioiconic-images/unilag-nigeria.jpeg";
+import paradisePalms from "../assets/bioiconic-images/paradise-palms.jpeg";
+import amboCap from "../assets/bioiconic-images/ambo-cap.jpeg";
+import sgsVolunteer from "../assets/bioiconic-images/sgs-volunteer.jpeg"
 
 interface  Work {
 	id: number;
@@ -28,6 +31,9 @@ const works: Work[] = [
 	{ id: 9, title: "Harvest Fan", image: harvest },
 	{ id: 10, title: "SGS", image: sgs },
 	{ id: 11, title: "Unilag Nigeria", image: unilagNigeria },
+	{ id: 12, title: "Paradise Palms", image: paradisePalms },
+	{ id: 13, title: "Ambo Cap", image: amboCap },
+	{ id: 14, title: "SGS Volunteer", image: sgsVolunteer },
 ];
 
 export default works;

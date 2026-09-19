@@ -1,5 +1,6 @@
 import navLinks from "../../data/navLinks.ts";
 import {useState} from "react";
+import logo from "../../assets/images/bips.svg"
 
 const Navbar = ({show}: {show: boolean}) => {
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -9,8 +10,9 @@ const Navbar = ({show}: {show: boolean}) => {
 			<header
 				className={`w-full bg-[#E4E4E4] ${isNavOpen ? "h-[80vh]" : "h-auto"} flex flex-col gap-10 fixed md:relative py-3 px-2 md:px-8 z-50 font-jetbrains-mono`}>
 				<nav className={"flex items-center justify-between "}>
-					<a className={"text-[22px] bg-vib-orange/50 text-olive-green font-black tracking-tighter"} href="/">bio-iconic<span
-						className={"text-vib-orange text-[25px]"}>.</span> </a>
+					<a className={" font-black tracking-tighter"} href="/">
+						<img className={"w-40"} src={logo} alt="bio-iconic logo"/>
+					</a>
 					
 					{show && (<>
 						<div className={"hidden md:flex items-center text-warm-black md:gap-8"}>
