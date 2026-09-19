@@ -1,5 +1,6 @@
 import navLinks from "../../data/navLinks.ts";
 import services from "../../data/services.ts";
+import logo from "../../assets/images/bips.svg"
 
 const Footer = () => {
 	const year = new Date().getFullYear();
@@ -7,11 +8,9 @@ const Footer = () => {
 	return (
 		<>
 		<footer id="footer" className="bg-warm-black rounded-t-3xl overflow-hidden">
-			<div className="w-full flex items-center justify-center px-4 pt-12">
-				<h3 className="font-black text-[80px] sm:text-[120px] lg:text-[200px] text-white uppercase text-center leading-none">
-					Bio-iconic
-				</h3>
-			</div>
+			<a href="#hero" className="w-full flex items-center justify-center px-4 pt-20">
+				<img src={logo} alt="bio-iconic logo"/>
+			</a>
 			
 			<div className="flex flex-col lg:grid lg:grid-cols-6 gap-10 lg:gap-20 px-6 py-15">
 				<div className="text-white col-span-3">
